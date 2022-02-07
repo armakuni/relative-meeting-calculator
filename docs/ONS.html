@@ -17,12 +17,12 @@
             margin: 0;
             min-height: 100vh;
             max-height: 100vh;
-            overflow: hidden;
         }
 
         svg.background {
             display: none;
         }
+
         @media (min-width: 1000px) {
             svg.background {
                 display: block;
@@ -51,12 +51,9 @@
             flex: 1;
             grid-template-rows: auto 1fr;
             max-width: 1000px;
-            margin-bottom: 100px;
         }
 
         main + footer {
-            position: absolute;
-            bottom: 0;
             height: 60px;
             padding: 10px;
             display: flex;
@@ -64,6 +61,13 @@
             align-items: center;
             width: 100%;
             background-color: #FFFA;
+        }
+
+        @media (min-height: 800px) {
+            main + footer {
+                position: absolute;
+                bottom: 0;
+            }
         }
 
         main + footer span + span {
